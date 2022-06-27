@@ -1,0 +1,25 @@
+<app-components></app-components>
+<hr>
+
+<h1>Structural directives</h1>
+<app-structural></app-structural>
+<hr>
+
+<h1>Attribute directives</h1>
+<h4>Pick a highlight color</h4>
+<div>
+  <input id="radio1" type="radio" name="colors" (click)="color='yellow'">
+  <label for="radio1">Yellow</label>
+
+  <input id="radio2" type="radio" name="colors" (click)="color='green'">
+  <label for="radio2">Green</label>
+
+  <input id="radio3" type="radio" name="colors" (click)="color='cyan'">
+  <label for="radio3">Cyan</label>
+</div>
+
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>

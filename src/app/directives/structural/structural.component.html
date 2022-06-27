@@ -1,0 +1,35 @@
+<b>Ng-if… else</b>
+<div *ngIf="time; else noTime">
+  Time: {{time}}
+</div>
+<ng-template #noTime> No time. </ng-template>
+<br>
+
+<b>Ng-Template</b>
+<div *ngIf="isTrue; then tmplWhenTrue else tmplWhenFalse"></div>
+<ng-template #tmplWhenTrue >I show-up when isTrue is true. </ng-template>
+<ng-template #tmplWhenFalse > I show-up when isTrue is false </ng-template>
+
+<br>
+<br>
+<br>
+
+
+<b>Ng-Container</b>
+<br>
+<i>Welcome <div *ngIf="title">to <i>the</i> {{title}} world.</div></i>
+<br>
+<u>Welcome <ng-container *ngIf="title">to <i>the</i> {{title}} world.</ng-container></u><br>
+
+<br>
+<br>
+
+<b>NgSwitch and NgSwitchCase</b>
+<div [ngSwitch]="isMetric">
+  <div *ngSwitchCase="true">Degree Celsius</div>
+  <div *ngSwitchCase="false">Fahrenheit</div>
+  <div *ngSwitchDefault>Default </div>
+</div>
+
+
+
